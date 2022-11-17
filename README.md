@@ -29,17 +29,28 @@ A user who gets on our platform can:
 
 ### Setup
 
-Before make sure postgres-sql server and clients are installed.
-Commands to setup the dev environment:
+Clone the repo:
 
 ```
+git clone https://github.com/mamatch/fake-support.git
+cd fake-support
+``
+
+Before running the following commands sure postgres-sql server and clients are installed.
+Setup the dev environment:
+
+```
+
 export FLASK_APP=fake_support.py
 make setup
+
 ```
 
 ### Run
 
 ```
+
 make run
+
 ```
 
