@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask_bootstrap import Bootstrap
 from flask_mail import Mail
 from flask_moment import Moment
@@ -26,8 +26,9 @@ def create_app(config_name: str) -> Flask:
     boot.init_app(app)
     mail.init_app(app)
 
-    @app.route("/test")
-    def test():
-        return "test ok"
+    # import blueprints
+    from app.main import main as main_blueprint
+
+    app.register_blueprint(main_blueprint)
 
     return app
