@@ -12,6 +12,7 @@ class Scammer(db.Model):
     __tablename__ = "scammers"
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(255))
+    test = "fuck"
 
     def __repr__(self):
         return f"<Scammer {self.name}>"
