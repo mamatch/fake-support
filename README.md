@@ -27,4 +27,19 @@ A user who gets on our platform can:
 
 ## For Contributors
 
+### Setup
+
+Before make sure postgres-sql server and clients are installed.
+Commands to setup the dev environment:
+
+```
+export FLASK_APP=fake_support.py
+make setup
+```
+
+### Run
+
+```
+make run
+```
 

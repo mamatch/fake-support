@@ -1,5 +1,17 @@
 ########################################################
-# File to handler different mdoels used in in the app  #
+# File to handler different models used in in the app  #
 ########################################################
 
 from . import db
+
+
+class Scammer(db.Model):
+    """
+    A class to abstracts the scammer table
+    """
+    __tablename__ = "scammers"
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(255))
+
+    def __repr__(self):
+        return f"<Scammer {self.name}>"

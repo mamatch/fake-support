@@ -7,3 +7,6 @@ __pycache__
 # ides
 .idea
 .vscode
+
+# database migrations
+migrations

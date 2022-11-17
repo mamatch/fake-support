@@ -3,7 +3,6 @@ from flask_bootstrap import Bootstrap
 from flask_mail import Mail
 from flask_moment import Moment
 from flask_sqlalchemy import SQLAlchemy
-
 from config import config
 
 db = SQLAlchemy()
@@ -14,7 +13,7 @@ mail = Mail()
 
 def create_app(config_name: str) -> Flask:
     """
-    A function to create an d instance of flask app
+    A function to create an  instance of flask app
     :param config_name: [dev, test, prod, default]
     :return: Flask instance
     """
@@ -27,7 +26,7 @@ def create_app(config_name: str) -> Flask:
     mail.init_app(app)
 
     # import blueprints
-    from app.main import main as main_blueprint
+    from .main import main as main_blueprint
 
     app.register_blueprint(main_blueprint)
 
