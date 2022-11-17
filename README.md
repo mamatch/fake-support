@@ -34,7 +34,7 @@ Clone the repo:
 ```
 git clone https://github.com/mamatch/fake-support.git
 cd fake-support
-``
+```
 
 Before running the following commands sure postgres-sql server and clients are installed.
 Setup the dev environment:
