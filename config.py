@@ -26,11 +26,14 @@ class DevConfig(Config):
     SQLALCHEMY_DATABASE_URI = os.environ.get(
         "DEV_DATABASE_URI") or CONNECTION_STR
 
+
 class TestConfig(Config):
     pass
 
+
 class ProdConfig(Config):
     pass
+
 
 config = {
     "dev": DevConfig,

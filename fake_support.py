@@ -1,11 +1,10 @@
-from flask import Flask
+from flask_migrate import Migrate
 
-test = Flask(__name__)
+from app import create_app, db
 
-
-@test.route("/")
-def index():
-    return "Hello !!!!"
+app = create_app("dev")
+migrate = Migrate(app)
 
 
-test.run()
+def runserver():
+    app.run()
